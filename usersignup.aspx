@@ -161,7 +161,7 @@
                         <div class="row">
                             <div class="col">
                                 <div class="form-group">
-                                    <asp:Button style="margin-top:15px" class="btn btn-success w-100 btn-lg mr-1" ID="Button1" runat="server" Text="Sign Up" />
+                                    <asp:Button style="margin-top:15px" class="btn btn-success w-100 btn-lg mr-1" ID="Button1" runat="server" Text="Sign Up" OnClick="Button1_Click" />
                                 </div>
                             </div>
                         </div>

@@ -1,4 +1,5 @@
 ﻿body {
+    font-size:small !important;
 }
 
 .footerlinks {
@@ -16,4 +17,8 @@
 
 #footer2 {
     background: #531f00;
+}
+
+.custom-row-color {
+    background-color: palevioletred !important;
 }

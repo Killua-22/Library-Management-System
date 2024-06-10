@@ -1,5 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="userprofile.aspx.cs" Inherits="LMS.userprofile" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css">
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //$(".table").DataTable();
+            $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
+
+        });
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -171,7 +181,7 @@
                             <div class="col">
                                 <center>
                                     <div class="form-group">
-                                        <asp:Button style="margin-top:15px" class="btn btn-primary btn-lg mr-1" ID="Button1" runat="server" Text="Update" />
+                                        <asp:Button style="margin-top:15px" class="btn btn-primary btn-lg mr-1" ID="Button1" runat="server" Text="Update" OnClick="Button1_Click" />
                                     </div>
                                 </center>
                             </div>
@@ -205,6 +215,7 @@
                             </div>
                         </div>
                         <div class="row">
+                            
                             <div class="col">
                                 <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server"></asp:GridView>
                             </div>

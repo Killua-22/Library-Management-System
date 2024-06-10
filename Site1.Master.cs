@@ -54,7 +54,7 @@ namespace LMS
                     LinkButton7.Visible = true; //hello user
                     LinkButton7.Text = "Hello " + Session["username"].ToString();
 
-                    LinkButton6.Visible = true; //admin login 
+                    LinkButton6.Visible = false; //admin login 
                     LinkButton11.Visible = true; //author management
                     LinkButton12.Visible = true; //publisher management 
                     LinkButton8.Visible = true; //book inventory
@@ -99,7 +99,7 @@ namespace LMS
 
         protected void LinkButton4_Click(object sender, EventArgs e)
         {
-            Response.Redirect(".aspx");
+            Response.Redirect("viewbooks.aspx");
         }
 
         protected void LinkButton1_Click(object sender, EventArgs e)
@@ -131,6 +131,11 @@ namespace LMS
             LinkButton8.Visible = false; //book inventory
             LinkButton9.Visible = false; //book issuing 
             LinkButton10.Visible = false; //member management
+        }
+
+        protected void LinkButton7_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("userprofile.aspx");
         }
     }
 }
